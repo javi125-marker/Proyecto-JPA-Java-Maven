@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Nuevo Cliente</title>
+</h:head>
+
+<style>
+button.ui-button {
+	margin-right: .5rem;
+}
+
+body {
+	color: white;
+	background: olive;
+	text-align: center;
+	font-family: arial;
+	size: 15px;
+	
+}
+form {
+
+	text-align: center;
+	position: absolute;
+	left: 540px;
+
+	
+
+}
+
+</style>
+<h:body>
+	<h2>
+		<h:outputText value="Crear un Cliente"></h:outputText>
+	</h2>
+	
+	<h:form style="left: 50%;">
+		<h:panelGrid style="border:0px none; background: radial-gradient(circle, rgba(250,255,255,0.6979166666666667) 0%, rgba(0,38,28,0.8407738095238095) 100%); width: 300px; height: 350px;"
+				styleClass="showcase-text-align-center">
+			<f:facet name="header">
+				<h:outputText value="Crear"></h:outputText>
+			</f:facet>
+			
+			<h:outputText value="Nombre"></h:outputText>
+			<h:inputText value="#{cliente.nombreusuario}"></h:inputText>
+			
+			<h:outputText value="Apellido"></h:outputText>
+			<h:inputText value="#{cliente.apellidousuario}"></h:inputText>
+			
+			<h:outputText value="Cédula"></h:outputText>
+			<h:inputText value="#{cliente.cedulausuario}"></h:inputText>
+			
+			<h:outputText value="Dirección"></h:outputText>
+			<h:inputText value="#{cliente.direccionusuario}"></h:inputText>
+			
+			<h:outputText value="Teléfono"></h:outputText>
+			<h:inputText value="#{cliente.telefonousuario}"></h:inputText>
+			
+			<h:outputText value="Correo"></h:outputText>
+			<h:inputText value="#{cliente.correousuario}"></h:inputText>
+			
+			<f:facet name="footer">
+				<p:commandButton action="#{clienteBean.guardar(cliente)}" value="Actualizar"></p:commandButton>
+			</f:facet>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
